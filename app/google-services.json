@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "273474605352",
+    "firebase_url": "https://bookclub-bbc65.firebaseio.com",
+    "project_id": "bookclub-bbc65",
+    "storage_bucket": "bookclub-bbc65.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:273474605352:android:41e326bb6527ebb3",
+        "android_client_info": {
+          "package_name": "com.application.bookclub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "273474605352-ejq637pa0cagfr4q9d2qm2mqc21b3k38.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDi5CwU4kv-VdEeIYZlYqyqNVI0QJupoZ8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "273474605352-ejq637pa0cagfr4q9d2qm2mqc21b3k38.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
