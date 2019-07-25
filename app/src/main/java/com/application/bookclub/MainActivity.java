@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         initViews();
         mAuth = FirebaseAuth.getInstance();
-        new CountDownTimer(5000, 1000) {
+        new CountDownTimer(1000, 1000) {
 
             @Override
             public void onTick(long millisUntilFinished) {
@@ -162,7 +162,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             Toast.makeText( getApplicationContext(), "Signed Up", Toast.LENGTH_SHORT ).show();
                             Toast.makeText( getApplicationContext(), "Logged In", Toast.LENGTH_SHORT ).show();
                             username=emailEditText.getText().toString();
-                            Intent intent = new Intent( getApplicationContext(),HomeActivity.class );
+                            Intent intent = new Intent( getApplicationContext(),StarterActivity.class );
                             startActivity( intent );
                         } else {
                             Toast.makeText( getApplicationContext(), task.getException().getMessage(), Toast.LENGTH_SHORT ).show();

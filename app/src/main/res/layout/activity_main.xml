@@ -26,7 +26,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="41dp"
         android:fontFamily="sans-serif-condensed-light"
-        android:text="For the Art of Reading"
+        android:text="For the Love of Reading"
         android:textColor="@color/colorSplashText"
         android:textSize="30sp" />
 

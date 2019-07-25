@@ -14,7 +14,7 @@
         android:layout_marginStart="82dp"
         android:layout_marginTop="145dp"
         android:fontFamily="sans-serif-condensed-light"
-        android:text="Add Genre"
+        android:text="Add Book"
         android:textAlignment="center"
         android:textSize="42sp" />
 
@@ -30,18 +30,18 @@
         android:layout_marginBottom="407dp"
         android:ems="10"
         android:fontFamily="sans-serif-condensed-light"
-        android:hint="Add your Genre"
+        android:hint="Add your Book."
         android:inputType="textPersonName" />
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="67dp"
+        android:layout_width="388dp"
+        android:layout_height="66dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="269dp"
         android:fontFamily="sans-serif-condensed-light"
-        android:text="A Club with the genre mentioned is created"
+        android:text="Share,Borrow or Lend Books with our network of Bookreaders"
         android:textSize="18sp" />
 
     <Button
@@ -53,5 +53,5 @@
         android:layout_marginStart="159dp"
         android:layout_marginBottom="144dp"
         android:fontFamily="sans-serif-condensed-light"
-        android:text="Add Club" />
+        android:text="Add Book" />
 </RelativeLayout>

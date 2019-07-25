@@ -3,12 +3,15 @@ package com.application.bookclub;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ActivityNotFoundException;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.net.Uri;
-
+import android.view.WindowManager;
+import android.view.Display;
 public class ChatRoomActivity extends AppCompatActivity {
 
 
@@ -16,15 +19,20 @@ public class ChatRoomActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
         setContentView(R.layout.activity_chat_room);
-        //WebView webView=findViewById( R.id.chatroom );
+        WebView webView=findViewById( R.id.chatroom );
 
         Intent intent=getIntent();
         String link=intent.getStringExtra( "link" );
         Log.i("LINKKKK",link);
-        //webView.getSettings().setJavaScriptEnabled(true);
-        //webView.loadUrl( link );
+        webView.requestFocus();
+        webView.setOverScrollMode(WebView.OVER_SCROLL_NEVER);
+        webView.getSettings().setLayoutAlgorithm( WebSettings.LayoutAlgorithm.NORMAL);
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.getSettings().setLoadWithOverviewMode( true );
+        webView.getSettings().setUseWideViewPort( true );
+        webView.loadUrl( link );
 
-        Intent intent1 = new Intent(Intent.ACTION_VIEW,Uri.parse(link));
+        /*Intent intent1 = new Intent(Intent.ACTION_VIEW,Uri.parse(link));
         intent1.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         intent1.setPackage("com.android.chrome");
         try {
@@ -35,12 +43,13 @@ public class ChatRoomActivity extends AppCompatActivity {
             getApplicationContext().startActivity(intent1);
         }
 
-
+        */
         //String[] usersplit=user.split( "" );
         //buffer.append( user );
 
         //gullapalli.srikar%40gmail.com&room=1  "
         //webView.loadUrl(  );
     }
+
 
 }

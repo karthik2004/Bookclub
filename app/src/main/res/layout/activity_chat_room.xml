@@ -8,8 +8,8 @@
 
     <WebView
         android:id="@+id/chatroom"
-        android:layout_width="395dp"
-        android:layout_height="715dp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="8dp" />
 </RelativeLayout>
