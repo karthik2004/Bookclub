@@ -40,7 +40,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 
-public class HomeActivity extends  ListActivity {
+public class HomeActivity extends  AppCompatActivity {
 
     private RecommenderCustomAdapter recommenderCustomAdapter;
     ArrayList<String> getgenre= new ArrayList<String>();
@@ -60,11 +60,11 @@ public class HomeActivity extends  ListActivity {
                 case R.id.navigation_home:
                     fragment = new MapFragment();
                     fragment.setArguments( bundle );
-                   // getSupportFragmentManager().beginTransaction().replace( R.id.container, fragment ).commit();
+                   getSupportFragmentManager().beginTransaction().replace( R.id.container, fragment ).commit();
                     return true;
                 case R.id.navigation_joingrp:
                     fragment = new ViewClubsFragment();
-                   // getSupportFragmentManager().beginTransaction().replace( R.id.container, fragment ).commit();
+                    getSupportFragmentManager().beginTransaction().replace( R.id.container, fragment ).commit();
 
                     return true;
                 case R.id.navigation_addgrp:
@@ -72,7 +72,7 @@ public class HomeActivity extends  ListActivity {
 
                     fragment = new AddClubFragment();
                     fragment.setArguments( bundle );
-                   // getSupportFragmentManager().beginTransaction().replace( R.id.container, fragment ).commit();
+                    getSupportFragmentManager().beginTransaction().replace( R.id.container, fragment ).commit();
 
 
                     return true;
@@ -91,7 +91,7 @@ public class HomeActivity extends  ListActivity {
         setContentView( R.layout.activity_home );
         BottomNavigationView navView = findViewById( R.id.nav_view );
         navView.setOnNavigationItemSelectedListener( mOnNavigationItemSelectedListener );
-        recommendedlistview= getListView();
+        recommendedlistview= (ListView) findViewById(R.id.recomlistview);
         recommenderCustomAdapter= new RecommenderCustomAdapter( this );
 
         getgenres();
@@ -108,7 +108,7 @@ public class HomeActivity extends  ListActivity {
             }
         }
 
-        setListAdapter(recommenderCustomAdapter);
+        recommendedlistview.setAdapter(recommenderCustomAdapter);
         locationManager = (LocationManager) getApplicationContext().getSystemService(LOCATION_SERVICE );
         locationListener = new android.location.LocationListener() {
             @Override
